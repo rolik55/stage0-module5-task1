@@ -34,7 +34,7 @@ public class ArrayTasksTest {
     @BeforeAll
     public static void findImports() throws IOException {
         notAllowedStrings = Files.readAllLines(
-                        Path.of("src/main/java/com/epam/stage0/algorithm/ArrayTasks.java")
+                        Path.of("src/main/java/com/epam/mjc/stage0/ArrayTasks.java")
                 ).stream()
                 .filter(line -> line.contains("import"))
                 .collect(Collectors.toList());
