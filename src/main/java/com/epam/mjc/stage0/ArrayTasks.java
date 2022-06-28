@@ -27,8 +27,8 @@ public class ArrayTasks {
      */
     public int[] generateNumbers(int length) {
         int[] array = new int[length];
-        for (int i = 1; i <= length; i++)
-            array[i] = i;
+        for (int i = 0; i < length; i++)
+            array[i] = i + 1;
         return array;
     }
 
@@ -95,12 +95,18 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        int[] positives = new int[arr.length];
-        int index = 0;
+        int count = 0;
         for(int i = 0; i < arr.length; i++) {
             if(arr[i] > 0) {
-                positives[index] = arr[i];
-                index++;
+                count++;
+            }
+        }
+        int[] positives = new int[count];
+        count = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > 0) {
+                positives[count] = arr[i];
+                count++;
             }
         }
         return positives;
